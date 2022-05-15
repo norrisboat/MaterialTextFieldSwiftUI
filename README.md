@@ -38,24 +38,24 @@ dependencies: [
 
 ```swift
 struct ContentView: View {
-  
+    
     @State private var isPasswordValid: Bool = false
     @State private var password: String = ""
     @State private var isSecure: Bool = false
     
-  var body: some View {
-    MaterialTextField($password, placeholder: "Enter password", isValid: $isPasswordValid)
-                      .isSecure(isSecure)
-                      .accentColor(.purple)
-                      .addValidations([RequiredValidator(errorMessage: "Please enter your password")])
-                      .rightView {
-                          Image(systemName: isPasswordShow ? "eye.fill" : "eye.slash.fill")
-                              .foregroundColor(.gray)
-                              .onTapGesture {
-                                      isSecure.toggle()
-                              }
-                      }
-  }
+    var body: some View {
+        MaterialTextField($password, placeholder: "Enter password", isValid: $isPasswordValid)
+            .isSecure(isSecure)
+            .accentColor(.purple)
+            .addValidations([RequiredValidator(errorMessage: "Please enter your password")])
+            .rightView {
+                Image(systemName: isPasswordShow ? "eye.fill" : "eye.slash.fill")
+                    .foregroundColor(.gray)
+                    .onTapGesture {
+                        isSecure.toggle()
+                    }
+            }
+    }
 }
 ```
 
