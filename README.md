@@ -14,7 +14,7 @@ If you like the project, please do not forget to **star ★** this repository an
 
 ## 📦 Requirements
 
-- iOS 13.0+
+- iOS 15.0+
 - Xcode 11.2+
 - Swift 5.0
 
